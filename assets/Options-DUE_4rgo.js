@@ -1,0 +1,1 @@
+import{o,s as a}from"./chunk-AYJ5UCUI-UCVQ5YbP.js";import{u as i,r as e}from"./gameSlice-BXw9ET-1.js";const r="_btn_yj4j9_2",s={btn:r},p=()=>{const t=i(),n=()=>{t(e())};return o.jsx(a,{to:"/",className:`${s.link} ${s.btn}`,"aria-label":"Options",onClick:n})};export{p as O};

@@ -1,0 +1,162 @@
+{
+  "_GameZone-CtFLogiv.js": {
+    "file": "assets/GameZone-CtFLogiv.js",
+    "name": "GameZone",
+    "imports": [
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_gameSlice-BXw9ET-1.js",
+      "_Options-DUE_4rgo.js"
+    ],
+    "css": [
+      "assets/GameZone-jBPmSUwf.css"
+    ]
+  },
+  "_GameZone-jBPmSUwf.css": {
+    "file": "assets/GameZone-jBPmSUwf.css",
+    "src": "_GameZone-jBPmSUwf.css"
+  },
+  "_Options-DUE_4rgo.js": {
+    "file": "assets/Options-DUE_4rgo.js",
+    "name": "Options",
+    "imports": [
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_gameSlice-BXw9ET-1.js"
+    ],
+    "css": [
+      "assets/Options-yXb2s-Ub.css"
+    ]
+  },
+  "_Options-yXb2s-Ub.css": {
+    "file": "assets/Options-yXb2s-Ub.css",
+    "src": "_Options-yXb2s-Ub.css"
+  },
+  "_chunk-AYJ5UCUI-UCVQ5YbP.js": {
+    "file": "assets/chunk-AYJ5UCUI-UCVQ5YbP.js",
+    "name": "chunk-AYJ5UCUI"
+  },
+  "_gameSlice-BXw9ET-1.js": {
+    "file": "assets/gameSlice-BXw9ET-1.js",
+    "name": "gameSlice",
+    "imports": [
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js"
+    ]
+  },
+  "_with-props-BhWtv66Y.js": {
+    "file": "assets/with-props-BhWtv66Y.js",
+    "name": "with-props",
+    "imports": [
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js"
+    ]
+  },
+  "app/pages/Custom/Custom.tsx?__react-router-build-client-route": {
+    "file": "assets/Custom-BNPJ2Y9q.js",
+    "name": "Custom",
+    "src": "app/pages/Custom/Custom.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-BhWtv66Y.js",
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_GameZone-CtFLogiv.js",
+      "_gameSlice-BXw9ET-1.js",
+      "_Options-DUE_4rgo.js"
+    ],
+    "css": [
+      "assets/Custom-CGUj_xF1.css"
+    ]
+  },
+  "app/pages/Easy/Easy.tsx?__react-router-build-client-route": {
+    "file": "assets/Easy-CmteEEpN.js",
+    "name": "Easy",
+    "src": "app/pages/Easy/Easy.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-BhWtv66Y.js",
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_GameZone-CtFLogiv.js",
+      "_gameSlice-BXw9ET-1.js",
+      "_Options-DUE_4rgo.js"
+    ]
+  },
+  "app/pages/Hard/Hard.tsx?__react-router-build-client-route": {
+    "file": "assets/Hard-Bet5HY6n.js",
+    "name": "Hard",
+    "src": "app/pages/Hard/Hard.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-BhWtv66Y.js",
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_GameZone-CtFLogiv.js",
+      "_gameSlice-BXw9ET-1.js",
+      "_Options-DUE_4rgo.js"
+    ],
+    "css": [
+      "assets/Hard-D_z57Ucn.css"
+    ]
+  },
+  "app/pages/Medium/Medium.tsx?__react-router-build-client-route": {
+    "file": "assets/Medium-KPiqjdYu.js",
+    "name": "Medium",
+    "src": "app/pages/Medium/Medium.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-BhWtv66Y.js",
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_GameZone-CtFLogiv.js",
+      "_gameSlice-BXw9ET-1.js",
+      "_Options-DUE_4rgo.js"
+    ],
+    "css": [
+      "assets/Medium-cIpYkFzl.css"
+    ]
+  },
+  "app/pages/Table/Table.tsx?__react-router-build-client-route": {
+    "file": "assets/Table-BVs1weB7.js",
+    "name": "Table",
+    "src": "app/pages/Table/Table.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_gameSlice-BXw9ET-1.js",
+      "_Options-DUE_4rgo.js"
+    ],
+    "css": [
+      "assets/Table-DNy47jKH.css"
+    ]
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-C8V7ZdRE.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-BhWtv66Y.js",
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js",
+      "_gameSlice-BXw9ET-1.js"
+    ],
+    "css": [
+      "assets/root-B5BRx-f4.css"
+    ]
+  },
+  "app/routes/home.tsx?__react-router-build-client-route": {
+    "file": "assets/home-CycC8N0I.js",
+    "name": "home",
+    "src": "app/routes/home.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-BhWtv66Y.js",
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js"
+    ],
+    "css": [
+      "assets/home-DGKHIpjf.css"
+    ]
+  },
+  "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx": {
+    "file": "assets/entry.client-B3-yWpgf.js",
+    "name": "entry.client",
+    "src": "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_chunk-AYJ5UCUI-UCVQ5YbP.js"
+    ]
+  }
+}
