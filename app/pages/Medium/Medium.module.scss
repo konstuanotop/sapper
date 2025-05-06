@@ -1,0 +1,14 @@
+.medium {
+  padding: 1rem;
+  max-width: 100vw;
+  overflow-x: auto;
+
+  .gameContainer {
+    min-width: fit-content;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
