@@ -1,0 +1,47 @@
+.resetGame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 6px;
+        background-color: #ddd;
+        border: 2px solid #ddd;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        &::after {
+            content: '😊';
+            display: block;
+            font-size: 24px;
+        }
+
+        &.defeat::after {
+            content: '😵';
+        }
+
+        &.win::after {
+            content: '😎';
+        }
+
+        &:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
