@@ -22,13 +22,11 @@ const Block: React.FC<BlockProps> = ({ id, firstClick, changeFirstClick, isOpene
 
     const dispatch = useDispatch();
 
-    const {
-        bombArea,
-        flagsIds,
-        query
-    } = useSelector((state: RootState) => state.game);
-
-    const isBomb = bombArea.includes(+id);
+    const { isBomb, flagsIds, query } = useSelector((state: RootState) => ({
+        isBomb: state.game.bombArea.includes(+id),
+        flagsIds: state.game.flagsIds,
+        query: state.game.query
+    }));
 
     const colorNumber = (id: number) => {
         if (id === 1) {
