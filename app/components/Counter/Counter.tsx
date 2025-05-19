@@ -12,7 +12,7 @@ const Counter = () => {
 
     useEffect(() => {
         setCount(bombs - flags)
-    }, [flags])
+    }, [flags, bombs])
 
     return (
         <div className={styles.counter}>

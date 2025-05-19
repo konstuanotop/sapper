@@ -63,3 +63,15 @@
   margin-top: 1rem;
   font-weight: bold;
 }
+
+.warning {
+  color: #ff9800;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
