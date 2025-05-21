@@ -35,6 +35,7 @@ interface GameState {
     isRunning: boolean;
     isDefeat: boolean;
     tableData: TableData[];
+    viewSector: number[];
 }
 
 const getPosition = (id: number, sizeX: number) => {
@@ -204,6 +205,7 @@ const initialState: GameState = {
     isRunning: false,
     isDefeat: false,
     tableData: loadLeaderBoard(),
+    viewSector: [],
 }
 
 const gameSlice = createSlice({
@@ -353,6 +355,62 @@ const gameSlice = createSlice({
             }
         },
 
+        middleClickDown(state, action: PayloadAction<number>) {
+            const id = action.payload;
+
+            const [x, y] = getPosition(id, state.sizeX);
+
+            const viewSectors: number[] = [];
+
+            if (y - 1 >= 0) {
+                if (x - 1 >= 0) {
+                    const newId = state.sizeArea[y - 1][x - 1];
+                    if (newId || newId === 0) viewSectors.push(newId)
+                }
+
+                const newIdCenter = state.sizeArea[y - 1][x];
+                if (newIdCenter || newIdCenter === 0) viewSectors.push(newIdCenter)
+
+                if (x + 1 < state.sizeX) {
+                    const newIdRight = state.sizeArea[y - 1][x + 1];
+                    if (newIdRight) viewSectors.push(newIdRight)
+                }
+            }
+
+
+            if (x - 1 >= 0) {
+                const newIdLeft = state.sizeArea[y][x - 1];
+                if (newIdLeft || newIdLeft === 0) viewSectors.push(newIdLeft)
+            }
+
+            if (x + 1 < state.sizeX) {
+                const newIdRight = state.sizeArea[y][x + 1];
+                if (newIdRight) viewSectors.push(newIdRight)
+            }
+
+
+            if (y + 1 < state.sizeY) {
+                if (x - 1 >= 0) {
+                    const newIdBottomLeft = state.sizeArea[y + 1][x - 1];
+                    if (newIdBottomLeft) viewSectors.push(newIdBottomLeft)
+                }
+
+                const newIdBottomCenter = state.sizeArea[y + 1][x];
+                if (newIdBottomCenter) viewSectors.push(newIdBottomCenter)
+
+                if (x + 1 < state.sizeX) {
+                    const newIdBottomRight = state.sizeArea[y + 1][x + 1];
+                    if (newIdBottomRight) viewSectors.push(newIdBottomRight)
+                }
+            }
+
+            state.viewSector = viewSectors;
+        },
+
+        middleClickUp(state) {
+            state.viewSector = [];
+        },
+
         resetGame(state) {
             return {
                 ...initialState,
@@ -493,7 +551,6 @@ const openingSections = (id: number, opened: number[], state: GameState) => {
         }
     }
 
-
     if (x - 1 >= 0) {
         const newIdLeft = state.sizeArea[y][x - 1];
         if (shouldContinue) openingSections(newIdLeft, opened, state);
@@ -529,6 +586,8 @@ export const {
     generateBombs,
     openBlock,
     rightClick,
+    middleClickDown,
+    middleClickUp,
     resetGame,
     winGame,
     startTimer,

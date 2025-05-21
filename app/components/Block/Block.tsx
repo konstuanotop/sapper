@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../store/store';
 import styles from './Block.module.scss';
-import { rightClick } from '~/store/gameSlice';
+import { middleClickDown, middleClickUp, rightClick } from '~/store/gameSlice';
 
 export interface Values {
     bomb: string;
@@ -22,10 +22,11 @@ const Block: React.FC<BlockProps> = ({ id, firstClick, changeFirstClick, isOpene
 
     const dispatch = useDispatch();
 
-    const { isBomb, flagsIds, query } = useSelector((state: RootState) => ({
+    const { isBomb, flagsIds, query, viewSector } = useSelector((state: RootState) => ({
         isBomb: state.game.bombArea.includes(+id),
         flagsIds: state.game.flagsIds,
-        query: state.game.query
+        query: state.game.query,
+        viewSector: state.game.viewSector,
     }));
 
     const colorNumber = (id: number) => {
@@ -74,7 +75,25 @@ const Block: React.FC<BlockProps> = ({ id, firstClick, changeFirstClick, isOpene
         e.preventDefault();
 
         dispatch(rightClick(+id))
+    };
+
+    const handleMiddleDown = (e: React.MouseEvent) => {
+        if (e.button === 1) {
+            e.preventDefault();
+
+            dispatch(middleClickDown(+id))
+        }
     }
+
+    const handleMiddleUp = (e: React.MouseEvent) => {
+        if (e.button === 1) {
+            e.preventDefault();
+
+            dispatch(middleClickUp());
+        }
+    }
+
+    const isViewSector = viewSector.includes(+id);
 
     return (
         <span
@@ -82,10 +101,13 @@ const Block: React.FC<BlockProps> = ({ id, firstClick, changeFirstClick, isOpene
             id={id}
             onClick={handleClick}
             onContextMenu={handleRightClick}
+            onMouseDown={handleMiddleDown}
+            onMouseUp={handleMiddleUp}
             data-opened={isOpened}
             data-bomb={isOpened && isBomb}
             data-empty={isEmpty}
             data-number={isNumber}
+            data-viewSector={isViewSector}
         >
             {getText()}
         </span>
