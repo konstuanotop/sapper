@@ -1,0 +1,1 @@
+import{o,s as a}from"./chunk-D4RADZKF-Db4mA--H.js";import{u as e,r as i}from"./gameSlice-DFCwCmk2.js";const r="_btn_yj4j9_2",s={btn:r},l=()=>{const t=e(),n=()=>{t(i())};return o.jsx(a,{to:"/sapper",className:`${s.link} ${s.btn}`,"aria-label":"Options",onClick:n})};export{l as O};
