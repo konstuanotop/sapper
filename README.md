@@ -19,4 +19,5 @@
 - Redux Toolkit
 - React Router V7
 
-![sapper](https://github.com/user-attachments/assets/b7f685e8-9fa3-4d72-ad27-5cd67f66bd3d)
+![sapper](https://github.com/user-attachments/assets/e41d64f2-8991-4105-b8f0-9a7ceb3c2b3a)
+
