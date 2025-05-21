@@ -1,4 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import axios from "axios";
 import { loadLeaderBoard, savedLeaderBoard, type TableData } from "~/utils/storage";
 
 export interface Values {
@@ -377,7 +378,17 @@ const gameSlice = createSlice({
             }
 
             const realPlayer = state.tableData.filter(player => !player.isPlaceholder);
-            const nextPlayerNumber = realPlayer.length + 1;
+
+            const maxPlayerNumber = realPlayer.reduce((max, player) => {
+                const match = player.name.match(/Игрок (\d+)/);
+                if (match) {
+                    const num = parseInt(match[1], 10);
+                    return num > max ? num : max;
+                }
+                return max;
+            }, 0);
+
+            const nextPlayerNumber = maxPlayerNumber + 1;
 
             const newPlayer = {
                 place: 0,
@@ -407,6 +418,16 @@ const gameSlice = createSlice({
 
             state.tableData = updateTable;
             savedLeaderBoard(updateTable);
+
+            try {
+                axios.post("https://e240b9d494e24100.mokky.dev/leaders", {
+                    name: newPlayer.name,
+                    time: formatTime(),
+                    timeInSeconds: state.time,
+                })
+            } catch (error) {
+                console.error('Ошибка при отправке результата на сервер:', error)
+            }
 
         },
 
